@@ -1,0 +1,264 @@
+
+C:\Users\a>ssh iitp@172.16.27.178
+iitp@172.16.27.178's password:
+Welcome to Ubuntu 16.04.4 LTS (GNU/Linux 4.13.0-36-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+169 packages can be updated.
+9 updates are security updates.
+
+New release '18.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+*** System restart required ***
+Last login: Tue Sep 22 12:28:20 2020 from 192.168.101.116
+iitp@iitp-virtual-machine:~$ ls
+altwordcount         docker-example              hadoop-2.6.0         sbt-1.0.0.tgz                  voting
+assig2               Dockerfile                  hadoop-2.6.0.tar.gz  scala-2.12.6                   vowelword
+assign6              docker-hello-world-example  HelloWorld.class     scala-2.12.6.tgz               wordcount
+Basement_trips.java  Documents                   HelloWorld.java      settings.gradle                wordcount-100
+bike                 Downloads                   login.sh             spark-2.2.0-bin-hadoop2.6      youtubedata
+build.gradle         examples.desktop            Music                spark-2.2.0-bin-hadoop2.6.tgz
+Desktop              fact-gradle                 Pictures             Templates
+docker               gradlew                     prime                uber
+docker_assign5       gradlew.bat                 Public               Videos
+iitp@iitp-virtual-machine:~$ rm -r uber
+iitp@iitp-virtual-machine:~$ ls
+altwordcount         Dockerfile                  HelloWorld.class  settings.gradle
+assig2               docker-hello-world-example  HelloWorld.java   spark-2.2.0-bin-hadoop2.6
+assign6              Documents                   login.sh          spark-2.2.0-bin-hadoop2.6.tgz
+Basement_trips.java  Downloads                   Music             Templates
+bike                 examples.desktop            Pictures          Videos
+build.gradle         fact-gradle                 prime             voting
+Desktop              gradlew                     Public            vowelword
+docker               gradlew.bat                 sbt-1.0.0.tgz     wordcount
+docker_assign5       hadoop-2.6.0                scala-2.12.6      wordcount-100
+docker-example       hadoop-2.6.0.tar.gz         scala-2.12.6.tgz  youtubedata
+iitp@iitp-virtual-machine:~$ mkdir uber123
+iitp@iitp-virtual-machine:~$ cd uber123
+iitp@iitp-virtual-machine:~/uber123$ mkdir inputdata
+iitp@iitp-virtual-machine:~/uber123$ cd /home/iitp/uber123
+iitp@iitp-virtual-machine:~/uber123$ nano Basement_trips.java
+iitp@iitp-virtual-machine:~/uber123$ exit
+logout
+Connection to 172.16.27.178 closed.
+
+C:\Users\a>scp uberdata iitp@172.16.27.178:/home/iitp/uber123/inputdata
+iitp@172.16.27.178's password:
+uberdata                                                                              100% 9849    19.4KB/s   00:00
+
+C:\Users\a>ssh iitp 172.16.27.178
+ssh: Could not resolve hostname iitp: No such host is known.
+
+C:\Users\a>ssh iitp@172.16.27.178
+iitp@172.16.27.178's password:
+Permission denied, please try again.
+iitp@172.16.27.178's password:
+Welcome to Ubuntu 16.04.4 LTS (GNU/Linux 4.13.0-36-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+169 packages can be updated.
+9 updates are security updates.
+
+New release '18.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+*** System restart required ***
+Last login: Tue Sep 22 12:36:46 2020 from 192.168.101.116
+iitp@iitp-virtual-machine:~$ cd uber123
+iitp@iitp-virtual-machine:~/uber123$ cd inputdata
+iitp@iitp-virtual-machine:~/uber123/inputdata$ ls
+uberdata
+iitp@iitp-virtual-machine:~/uber123/inputdata$ rm -r uberdata
+iitp@iitp-virtual-machine:~/uber123/inputdata$ ls
+iitp@iitp-virtual-machine:~/uber123/inputdata$ exit
+logout
+Connection to 172.16.27.178 closed.
+
+C:\Users\a>scp uberdata.txt iitp@172.16.27.178:/home/iitp/uber123/inputdata
+iitp@172.16.27.178's password:
+uberdata.txt                                                                          100% 9460    11.4KB/s   00:00
+
+C:\Users\a>ssh iitp@172.16.27.178
+iitp@172.16.27.178's password:
+Welcome to Ubuntu 16.04.4 LTS (GNU/Linux 4.13.0-36-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+169 packages can be updated.
+9 updates are security updates.
+
+New release '18.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+*** System restart required ***
+Last login: Tue Sep 22 12:54:36 2020 from 192.168.101.116
+iitp@iitp-virtual-machine:~$ cd uber123
+iitp@iitp-virtual-machine:~/uber123$ nano Basement_trips.java
+iitp@iitp-virtual-machine:~/uber123$ iitp@iitp-virtual-machine:~/uber123$ cd /home/iitp/hadoop-2.6.0/sbin
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/sbin$ ./start-all.sh
+This script is Deprecated. Instead use start-dfs.sh and start-yarn.sh
+Starting namenodes on [localhost]
+iitp@localhost's password:
+localhost: namenode running as process 12746. Stop it first.
+iitp@localhost's password:
+localhost: datanode running as process 12885. Stop it first.
+Starting secondary namenodes [0.0.0.0]
+iitp@0.0.0.0's password:
+0.0.0.0: secondarynamenode running as process 13056. Stop it first.
+starting yarn daemons
+resourcemanager running as process 13197. Stop it first.
+iitp@localhost's password:
+localhost: nodemanager running as process 13505. Stop it first.
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/sbin$ cd /home/iitp/hadoop-2.6.0/bin
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$ ./hadoop fs -mkdir /uber123
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$ ./hadoop fs -mkdir /uber123/inputdata
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$ cd /home/iitp/hadoop-2.6.0/bin
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$ ./hadoop dfs -put /home/iitp/uber123/inputdata/uberdata.txt /uber123/inputdata
+DEPRECATED: Use of this script to execute hdfs command is deprecated.
+Instead use the hdfs command for it.
+
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$ export HADOOP_CLASSPATH=/usr/lib/jvm/java-1.8.0-openjdk-amd64/lib/tools.jar
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$ cd /home/iitp/hadoop-2.6.0/bin
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$ ./hadoop com.sun.tools.javac.Main /home/iitp/uber/Basement_trips.java
+javac: file not found: /home/iitp/uber/Basement_trips.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$ ./hadoop com.sun.tools.javac.Main /home/iitp/uber123/Basement_trips.java
+Note: /home/iitp/uber123/Basement_trips.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$ cd /home/iitp/uber123
+iitp@iitp-virtual-machine:~/uber123$ jar cf basement_trips.jar Basement_trips*.class
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$ ./hadoop jar /home/iitp/uber123/basement_trips.jar Basement_trips/uber123/inputdata/ /uber123/outputdata
+Exception in thread "main" java.lang.ClassNotFoundException: Basement_trips.uber123.inputdata.
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+        at java.lang.Class.forName0(Native Method)
+        at java.lang.Class.forName(Class.java:348)
+        at org.apache.hadoop.util.RunJar.run(RunJar.java:214)
+        at org.apache.hadoop.util.RunJar.main(RunJar.java:136)
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$ ./hadoop jar /home/iitp/uber123/basement_trips.jar Basement_trips /uber123/inputdata/ /uber123/outputdata
+20/09/22 13:03:58 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/09/22 13:03:59 WARN mapreduce.JobSubmitter: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/09/22 13:03:59 INFO input.FileInputFormat: Total input paths to process : 1
+20/09/22 13:03:59 INFO mapreduce.JobSubmitter: number of splits:1
+20/09/22 13:03:59 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1599557317188_0020
+20/09/22 13:04:00 INFO impl.YarnClientImpl: Submitted application application_1599557317188_0020
+20/09/22 13:04:00 INFO mapreduce.Job: The url to track the job: http://iitp-virtual-machine:8088/proxy/application_1599557317188_0020/
+20/09/22 13:04:00 INFO mapreduce.Job: Running job: job_1599557317188_0020
+20/09/22 13:04:07 INFO mapreduce.Job: Job job_1599557317188_0020 running in uber mode : false
+20/09/22 13:04:07 INFO mapreduce.Job:  map 0% reduce 0%
+20/09/22 13:04:13 INFO mapreduce.Job:  map 100% reduce 0%
+20/09/22 13:04:20 INFO mapreduce.Job:  map 100% reduce 100%
+20/09/22 13:04:20 INFO mapreduce.Job: Job job_1599557317188_0020 completed successfully
+20/09/22 13:04:20 INFO mapreduce.Job: Counters: 49
+        File System Counters
+                FILE: Number of bytes read=720
+                FILE: Number of bytes written=212279
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=9577
+                HDFS: Number of bytes written=727
+                HDFS: Number of read operations=6
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+        Job Counters
+                Launched map tasks=1
+                Launched reduce tasks=1
+                Data-local map tasks=1
+                Total time spent by all maps in occupied slots (ms)=3735
+                Total time spent by all reduces in occupied slots (ms)=3775
+                Total time spent by all map tasks (ms)=3735
+                Total time spent by all reduce tasks (ms)=3775
+                Total vcore-seconds taken by all map tasks=3735
+                Total vcore-seconds taken by all reduce tasks=3775
+                Total megabyte-seconds taken by all map tasks=3824640
+                Total megabyte-seconds taken by all reduce tasks=3865600
+        Map-Reduce Framework
+                Map input records=354
+                Map output records=354
+                Map output bytes=5310
+                Map output materialized bytes=720
+                Input split bytes=117
+                Combine input records=354
+                Combine output records=42
+                Reduce input groups=42
+                Reduce shuffle bytes=720
+                Reduce input records=42
+                Reduce output records=42
+                Spilled Records=84
+                Shuffled Maps =1
+                Failed Shuffles=0
+                Merged Map outputs=1
+                GC time elapsed (ms)=117
+                CPU time spent (ms)=970
+                Physical memory (bytes) snapshot=322998272
+                Virtual memory (bytes) snapshot=3762130944
+                Total committed heap usage (bytes)=222429184
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters
+                Bytes Read=9460
+        File Output Format Counters
+                Bytes Written=727
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$ ./hadoop fs -cat /uber/outputdata/part-r-00000
+cat: `/uber/outputdata/part-r-00000': No such file or directory
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$ ./hadoop fs -cat /uber123/outputdata/part-r-00000
+B02512 Fri      16435
+B02512 Mon      11297
+B02512 Sat      15026
+B02512 Sun      10487
+B02512 Thu      15809
+B02512 Tue      12041
+B02512 Wed      12691
+B02598 Fri      93126
+B02598 Mon      60882
+B02598 Sat      94588
+B02598 Sun      66477
+B02598 Thu      90333
+B02598 Tue      63429
+B02598 Wed      71956
+B02617 Fri      125067
+B02617 Mon      80591
+B02617 Sat      127902
+B02617 Sun      91722
+B02617 Thu      118254
+B02617 Tue      86602
+B02617 Wed      94887
+B02682 Fri      114662
+B02682 Mon      74939
+B02682 Sat      120283
+B02682 Sun      82825
+B02682 Thu      106643
+B02682 Tue      76905
+B02682 Wed      86252
+B02764 Fri      326968
+B02764 Mon      214116
+B02764 Sat      356789
+B02764 Sun      249896
+B02764 Thu      304200
+B02764 Tue      221343
+B02764 Wed      241137
+B02765 Fri      34934
+B02765 Mon      21974
+B02765 Sat      36737
+B02765 Sun      22536
+B02765 Thu      30408
+B02765 Tue      22741
+B02765 Wed      24340
+iitp@iitp-virtual-machine:~/hadoop-2.6.0/bin$
